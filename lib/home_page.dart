@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
     HomeView(),
     SavingsView(),
     InvestView(),
-    AccountView()
+    AccountView(),
   ];
 
   var selectedIndex = 0;
