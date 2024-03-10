@@ -24,17 +24,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Savenet App"),
-      ),
       body: listOfPages[selectedIndex],
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: (){
-          print("FAB CLICKED");
-        },
-      ) ,
-
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: selectedIndex,
         unselectedItemColor: Colors.black,
@@ -54,7 +44,7 @@ class _HomePageState extends State<HomePage> {
           label: "Savings",
           ),
           BottomNavigationBarItem(icon: Icon(Icons.rocket_launch),
-          label: "Navigation"),
+          label: "Invest"),
           BottomNavigationBarItem(icon: Icon(Icons.account_circle),
                 label: "Account" ),
         ],

@@ -9,3 +9,4 @@ class InvestView extends StatelessWidget {
     return Text("Invest");
   }
 }
+
