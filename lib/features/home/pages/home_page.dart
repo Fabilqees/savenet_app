@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:savenet_app/account_view.dart';
-import 'package:savenet_app/home_view.dart';
+
+import 'package:savenet_app/features/accounts/pages/account_view.dart';
+import 'package:savenet_app/features/home/pages/home_view.dart';
+import 'package:savenet_app/features/savings/pages/savings_view.dart';
+
 import 'package:savenet_app/invest_view.dart';
-import 'package:savenet_app/savings_view.dart';
+
+
+
 
 class HomePage  extends StatefulWidget {
 
@@ -41,15 +46,14 @@ class _HomePageState extends State<HomePage> {
               label: "Home"
           ),
           BottomNavigationBarItem(icon: Icon(Icons.savings),
-          label: "Savings",
+            label: "Savings",
           ),
           BottomNavigationBarItem(icon: Icon(Icons.rocket_launch),
-          label: "Invest"),
+              label: "Invest"),
           BottomNavigationBarItem(icon: Icon(Icons.account_circle),
-                label: "Account" ),
+              label: "Account" ),
         ],
       ),
     );
   }
 }
-
