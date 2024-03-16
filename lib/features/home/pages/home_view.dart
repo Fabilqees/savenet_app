@@ -1,5 +1,7 @@
 
 import 'package:flutter/material.dart';
+import 'package:savenet_app/features/home/widget/my_todo_section.dart';
+import 'package:savenet_app/features/home/widget/top_savings_section.dart';
 
 import '../widget/savings_details_card.dart';
 import '../widget/suggestions_section.dart';
@@ -43,6 +45,8 @@ class HomeView extends StatelessWidget {
         padding: EdgeInsets.all(16.0),
         children: [
           SavingDetailsCard(),
+          MyTodoSection(),
+          TopSavingsSection(),
           SuggestionsSection()
         ],
       ),
@@ -56,6 +60,9 @@ class HomeView extends StatelessWidget {
     );
   }
 }
+
+
+
 
 
 
