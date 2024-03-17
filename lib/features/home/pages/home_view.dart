@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:savenet_app/features/home/widget/my_todo_section.dart';
 import 'package:savenet_app/features/home/widget/top_savings_section.dart';
+import 'package:savenet_app/features/home/widget/vetted_oportunities_section.dart';
 
 import '../widget/savings_details_card.dart';
 import '../widget/suggestions_section.dart';
@@ -47,7 +48,8 @@ class HomeView extends StatelessWidget {
           SavingDetailsCard(),
           MyTodoSection(),
           TopSavingsSection(),
-          SuggestionsSection()
+          SuggestionsSection(),
+          VettedOpportunitesSection()
         ],
       ),
       floatingActionButton: FloatingActionButton(

@@ -59,9 +59,29 @@ class MyTodoSection extends StatelessWidget {
                     onPressed: () {}
                 ),
                 MyTodoItem(
-                  title: "Enable face id/ fingerprint",
+                  title: "Enable FaceID /Fingerprint",
                   progress: 0,
                     onPressed: () {}
+                ),
+                MyTodoItem(
+                    title: "Add a Picture",
+                    progress: 0.1,
+                    onPressed: () {},
+                ),
+                MyTodoItem(
+                  title: "Add your BVN",
+                  progress: 0.2,
+                  onPressed: () {},
+                ),
+                MyTodoItem(
+                  title: "Verify your Identity",
+                  progress: 0.8,
+                  onPressed: () {},
+                ),
+                MyTodoItem(
+                  title: "Add your Address",
+                  progress: 0.9,
+                  onPressed: () {},
                 )
               ],
 
