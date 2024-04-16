@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:savenet_app/features/home/widget/vetted_opportunities_item.dart';
 
 class VettedOpportunitesSection extends StatelessWidget {
   const VettedOpportunitesSection({super.key});
@@ -37,10 +38,36 @@ class VettedOpportunitesSection extends StatelessWidget {
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
-                VOItem(),
-                VOItem(),
-                VOItem(),
-                VOItem(),
+                VOItem(
+                  image: ("assets/images/invest_img.png"),
+                  title: "CORPERATE DEBT",
+                  subtitle: "10%. returns in 9 months",
+                ),
+                VOItem(
+                  image: ("assets/images/invest_img2.png"),
+                  title: "CORPERATE DEBT",
+                  subtitle: "5.9%. returns in 6 months",
+                ),
+                VOItem(
+                  image: ("assets/images/invest_img3.png"),
+                  title: "CORPERATE DEBT",
+                  subtitle: "10.4%. returns in 10 months",
+                ),
+                VOItem(
+                  image: ("assets/images/invest_img4.png"),
+                  title: "CORPERATE DEBT",
+                  subtitle: "3.7%. returns in 3 months",
+                ),
+                VOItem(
+                  image: ("assets/images/invest_img5.png"),
+                  title: "CORPERATE DEBT",
+                  subtitle: "11%. returns in 9 months",
+                ),
+                VOItem(
+                  image: ("assets/images/invest_img6.png"),
+                  title: "CORPERATE DEBT",
+                  subtitle: "6.7%. returns in 6 months",
+                ),
               ],
             ),
           )
@@ -50,32 +77,3 @@ class VettedOpportunitesSection extends StatelessWidget {
   }
 }
 
-class VOItem extends StatelessWidget {
-  const VOItem({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(right: 8),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-       children: [
-         Image.asset(
-             "assets/images/invest_img.png",
-           width: 152,
-         ),
-         Text(
-             "Corperate debt",
-           style: TextStyle(
-             fontWeight: FontWeight.bold,
-             fontSize: 18
-           ),
-         ),
-         Text("10% returns in 9 months")
-       ],
-      ),
-    );
-  }
-}

@@ -3,7 +3,12 @@ import 'package:flutter/material.dart';
 class SavingDetailsCard extends StatelessWidget {
   const SavingDetailsCard({
     super.key,
+    required this.bottomLeftWidget,
+    required this.topRightWidget
   });
+
+  final Widget bottomLeftWidget;
+  final Widget topRightWidget;
 
   @override
   Widget build(BuildContext context) {
@@ -25,8 +30,8 @@ class SavingDetailsCard extends StatelessWidget {
                     vertical: 0,
                     horizontal: 4
                 ),
-                backgroundColor: Colors.black,
-                foregroundColor: Colors.white
+                backgroundColor: Colors.yellow.shade800,
+                foregroundColor: Colors.black
             ),
           ),
 
@@ -34,39 +39,12 @@ class SavingDetailsCard extends StatelessWidget {
           Positioned(
             top: 0,
             right: 0,
-            child: ElevatedButton(
-              onPressed:  (){},
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Text("View Savings"),
-                  Icon(Icons.arrow_forward)
-                ],
-              ),
-              style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.symmetric(
-                      vertical: 0,
-                      horizontal: 4
-                  )
-              ),
-            ),
+            child: topRightWidget
           ),
           Positioned(
               bottom: 0,
               left: 0,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text("My Savings"),
-                  Text(
-                    "****",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20
-                    ),
-                  )
-                ],
-              )
+              child: bottomLeftWidget
           )
         ],
 

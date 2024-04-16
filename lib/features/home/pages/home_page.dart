@@ -5,7 +5,7 @@ import 'package:savenet_app/features/accounts/pages/account_view.dart';
 import 'package:savenet_app/features/home/pages/home_view.dart';
 import 'package:savenet_app/features/savings/pages/savings_view.dart';
 
-import 'package:savenet_app/invest_view.dart';
+import 'package:savenet_app/features/invest/invest_view.dart';
 
 
 

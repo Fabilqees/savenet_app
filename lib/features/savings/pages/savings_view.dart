@@ -1,11 +1,54 @@
 
 import 'package:flutter/material.dart';
+import 'package:savenet_app/features/home/widget/savings_details_card.dart';
+import 'package:savenet_app/features/savings/widgets/flexible_savings_section.dart';
+import 'package:savenet_app/features/savings/widgets/stricy_savings_section.dart';
 
 class SavingsView extends StatelessWidget {
   const SavingsView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Text("Savings");
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("My Savings"),
+        centerTitle: true,
+        actions: [
+          IconButton(
+              onPressed: (){},
+              icon: Icon(Icons.info_outline_rounded)
+          )
+        ],
+      ),
+      body: ListView(
+        padding: EdgeInsets.all(16),
+        children: [
+          SavingDetailsCard(
+            topRightWidget: Chip(
+              label: Text(
+                  "up to 13% returns",
+                style: TextStyle(color: Colors.white),
+              ),
+              backgroundColor: Colors.black,
+              shape: StadiumBorder(),
+            ),
+            bottomLeftWidget: Column(
+              children: [
+                Text("My savings"),
+                Text(
+                    "\$288",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20
+                  ),
+                )
+              ],
+            ),
+          ),
+          StrictSavingsSection(),
+          FlexibleSavingsSection()
+        ],
+      ),
+    );
   }
 }

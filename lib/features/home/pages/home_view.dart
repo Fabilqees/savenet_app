@@ -45,7 +45,37 @@ class HomeView extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.all(16.0),
         children: [
-          SavingDetailsCard(),
+          SavingDetailsCard(
+            bottomLeftWidget: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("My Savings"),
+                Text(
+                  "****",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20
+                  ),
+                )
+              ],
+            ),
+            topRightWidget: ElevatedButton(
+              onPressed:  (){},
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text("View Savings"),
+                  Icon(Icons.arrow_forward)
+                ],
+              ),
+              style: ElevatedButton.styleFrom(
+                  padding: EdgeInsets.symmetric(
+                      vertical: 0,
+                      horizontal: 4
+                  )
+              ),
+            ),
+          ),
           MyTodoSection(),
           TopSavingsSection(),
           SuggestionsSection(),
