@@ -49,12 +49,18 @@ class HomeView extends StatelessWidget {
             bottomLeftWidget: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("My Savings"),
+                Text(
+                    "My Savings",
+                     style: TextStyle(
+                       color: Colors.grey.shade200
+                     ),
+                ),
                 Text(
                   "****",
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: 20
+                      fontSize: 20,
+                      color: Colors.white,
                   ),
                 )
               ],
