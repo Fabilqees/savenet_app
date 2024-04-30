@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:savenet_app/features/home/widget/savings_details_card.dart';
+import 'package:savenet_app/features/savings/pages/quick_savings_page.dart';
 import 'package:savenet_app/features/savings/widgets/flexible_savings_section.dart';
 import 'package:savenet_app/features/savings/widgets/stricy_savings_section.dart';
 
@@ -44,6 +45,14 @@ class SavingsView extends StatelessWidget {
                 )
               ],
             ),
+            onClick: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context){
+                  return QuickSave();
+                })
+              );
+            },
           ),
           StrictSavingsSection(),
           FlexibleSavingsSection()

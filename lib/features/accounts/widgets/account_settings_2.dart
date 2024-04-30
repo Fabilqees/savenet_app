@@ -48,6 +48,21 @@ class AccountSettings2 extends StatelessWidget {
             icon: Icon(Icons.lock),
           ),
           Divider(color: Colors.grey.shade300,),
+          AccountSettingsItem(
+            title: "Change App Icon",
+            icon: Icon(Icons.settings),
+          ),
+          Divider(color: Colors.grey.shade300,),
+      ListTile(
+        leading: Icon(Icons.change_circle),
+        title: Text(
+          "Check for Updates",
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+          Divider(color: Colors.grey.shade300,),
           ListTile(
             leading: Icon(Icons.logout,color: Colors.red.shade700,),
             title: Text(

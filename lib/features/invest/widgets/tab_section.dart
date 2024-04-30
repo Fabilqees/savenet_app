@@ -20,15 +20,17 @@ class TabSection extends StatelessWidget {
              ]
             ),
             SizedBox(
-              height: 400,
+              height: 200,
               child: TabBarView(
                   children: [
                     Container(
+                      decoration: BoxDecoration(
+                      ),
                       child: Text("ACTIVE INVESTMENT"),
                     ),
                     Container(
                       child: Text("MATURED INVESTMENTS"),
-                    )
+                    ),
                   ]
               ),
             )

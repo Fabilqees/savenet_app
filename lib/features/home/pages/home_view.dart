@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:savenet_app/features/home/widget/my_todo_section.dart';
 import 'package:savenet_app/features/home/widget/top_savings_section.dart';
 import 'package:savenet_app/features/home/widget/vetted_oportunities_section.dart';
+import 'package:savenet_app/features/invest/widgets/invest_details_card.dart';
 
 import '../widget/savings_details_card.dart';
 import '../widget/suggestions_section.dart';
+import '../widget/user_balance_card.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -45,43 +47,7 @@ class HomeView extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.all(16.0),
         children: [
-          SavingDetailsCard(
-            bottomLeftWidget: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                    "My Savings",
-                     style: TextStyle(
-                       color: Colors.grey.shade200
-                     ),
-                ),
-                Text(
-                  "****",
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                      color: Colors.white,
-                  ),
-                )
-              ],
-            ),
-            topRightWidget: ElevatedButton(
-              onPressed:  (){},
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Text("View Savings"),
-                  Icon(Icons.arrow_forward)
-                ],
-              ),
-              style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.symmetric(
-                      vertical: 0,
-                      horizontal: 4
-                  )
-              ),
-            ),
-          ),
+          UserBalanceDetails(),
           MyTodoSection(),
           TopSavingsSection(),
           SuggestionsSection(),
@@ -98,6 +64,7 @@ class HomeView extends StatelessWidget {
     );
   }
 }
+
 
 
 
